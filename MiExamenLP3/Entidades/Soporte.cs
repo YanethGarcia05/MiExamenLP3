@@ -8,7 +8,7 @@ namespace Entidades
 {
     public class Soporte
     {
-        public int Id { get; set; }
+        public int Codigo { get; set; }
 
         public string TipoSoporte { get; set; }
     }

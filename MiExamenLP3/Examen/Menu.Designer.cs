@@ -64,8 +64,8 @@
             // facturaToolStripMenuItem
             // 
             this.facturaToolStripMenuItem.Name = "facturaToolStripMenuItem";
-            this.facturaToolStripMenuItem.Size = new System.Drawing.Size(58, 20);
-            this.facturaToolStripMenuItem.Text = "Factura";
+            this.facturaToolStripMenuItem.Size = new System.Drawing.Size(94, 20);
+            this.facturaToolStripMenuItem.Text = "FacturaTickets";
             // 
             // Menu
             // 

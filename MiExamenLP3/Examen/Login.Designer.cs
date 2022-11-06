@@ -41,7 +41,7 @@
             // 
             // ClaveTextBox
             // 
-            this.ClaveTextBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F);
+            this.ClaveTextBox.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.ClaveTextBox.Location = new System.Drawing.Point(156, 68);
             this.ClaveTextBox.Name = "ClaveTextBox";
             this.ClaveTextBox.PasswordChar = '*';
@@ -50,7 +50,7 @@
             // 
             // UsuarioTextBox
             // 
-            this.UsuarioTextBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F);
+            this.UsuarioTextBox.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.UsuarioTextBox.Location = new System.Drawing.Point(156, 30);
             this.UsuarioTextBox.Name = "UsuarioTextBox";
             this.UsuarioTextBox.Size = new System.Drawing.Size(203, 22);
@@ -59,27 +59,27 @@
             // ClaveLabel
             // 
             this.ClaveLabel.AutoSize = true;
-            this.ClaveLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold);
+            this.ClaveLabel.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.ClaveLabel.Location = new System.Drawing.Point(90, 72);
             this.ClaveLabel.Name = "ClaveLabel";
-            this.ClaveLabel.Size = new System.Drawing.Size(50, 18);
+            this.ClaveLabel.Size = new System.Drawing.Size(43, 16);
             this.ClaveLabel.TabIndex = 26;
             this.ClaveLabel.Text = "Clave";
             // 
             // UsuarioLabel
             // 
             this.UsuarioLabel.AutoSize = true;
-            this.UsuarioLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold);
+            this.UsuarioLabel.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.UsuarioLabel.Location = new System.Drawing.Point(73, 34);
             this.UsuarioLabel.Name = "UsuarioLabel";
-            this.UsuarioLabel.Size = new System.Drawing.Size(67, 18);
+            this.UsuarioLabel.Size = new System.Drawing.Size(55, 16);
             this.UsuarioLabel.TabIndex = 25;
             this.UsuarioLabel.Text = "Usuario";
             // 
             // CancelarButton
             // 
             this.CancelarButton.DialogResult = System.Windows.Forms.DialogResult.Cancel;
-            this.CancelarButton.Font = new System.Drawing.Font("Cooper Black", 12F);
+            this.CancelarButton.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.CancelarButton.Image = global::Examen.Properties.Resources.cancelar;
             this.CancelarButton.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.CancelarButton.Location = new System.Drawing.Point(215, 110);
@@ -93,7 +93,7 @@
             // 
             // AceptarButton
             // 
-            this.AceptarButton.Font = new System.Drawing.Font("Cooper Black", 12F);
+            this.AceptarButton.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.AceptarButton.Image = global::Examen.Properties.Resources.garrapata;
             this.AceptarButton.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.AceptarButton.Location = new System.Drawing.Point(76, 110);

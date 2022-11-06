@@ -1,14 +1,15 @@
-﻿using Datos;
-using Entidades;
-using System;
+﻿using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
 using System.Drawing;
+using System.IO;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using Datos;
+using Entidades;
 
 namespace Examen
 {
@@ -35,11 +36,6 @@ namespace Examen
             TipoSoporteComboBox.Enabled = false;
         }
 
-        private void SoporteForm_Load(object sender, EventArgs e)
-        {
-            LlenarDataGrid();
-        }
-
         private void NuevoButton_Click(object sender, EventArgs e)
         {
             tipoOperacion = "Nuevo";
@@ -51,7 +47,7 @@ namespace Examen
             tipoOperacion = "Modificar";
             if (SoporteDataGridView.SelectedRows.Count > 0)
             {
-                CodigoTextBox.Text = SoporteDataGridView.CurrentRow.Cells["Id"].Value.ToString();
+                CodigoTextBox.Text = SoporteDataGridView.CurrentRow.Cells["Codigo"].Value.ToString();
                 TipoSoporteComboBox.Text = SoporteDataGridView.CurrentRow.Cells["TipoSoporte"].Value.ToString();
 
                 HabilitarControles();
@@ -71,7 +67,7 @@ namespace Examen
             {
                 if (CodigoTextBox.Text == "")
                 {
-                    errorProvider1.SetError(CodigoTextBox, "Ingrese un id");
+                    errorProvider1.SetError(CodigoTextBox, "Ingrese un codigo");
                     CodigoTextBox.Focus();
                     return;
                 }
@@ -82,7 +78,7 @@ namespace Examen
                     return;
                 }
 
-                soporte.Id = Convert.ToInt32(CodigoTextBox.Text);
+                soporte.Codigo = Convert.ToInt32(CodigoTextBox.Text);
                 soporte.TipoSoporte = TipoSoporteComboBox.Text;
 
                 bool inserto = await userDatos.InsertarAsync(soporte);
@@ -103,18 +99,18 @@ namespace Examen
             {
                 if (CodigoTextBox.Text == "")
                 {
-                    errorProvider1.SetError(CodigoTextBox, "Ingrese un id");
+                    errorProvider1.SetError(CodigoTextBox, "Ingrese un codigo");
                     CodigoTextBox.Focus();
                     return;
                 }
                 if (string.IsNullOrEmpty(TipoSoporteComboBox.Text))
                 {
-                    errorProvider1.SetError(TipoSoporteComboBox, "Ingrese un tipo soporte");
+                    errorProvider1.SetError(TipoSoporteComboBox, "Ingrese un nombre");
                     TipoSoporteComboBox.Focus();
                     return;
                 }
 
-                soporte.Id = Convert.ToInt32(CodigoTextBox.Text);
+                soporte.Codigo = Convert.ToInt32(CodigoTextBox.Text);
                 soporte.TipoSoporte = TipoSoporteComboBox.Text;
 
                 bool modifico = await userDatos.ActualizarAsync(soporte);
@@ -147,7 +143,7 @@ namespace Examen
         {
             if (SoporteDataGridView.SelectedRows.Count > 0)
             {
-                bool elimino = await userDatos.EliminarAsync(SoporteDataGridView.CurrentRow.Cells["Id"].Value.ToString());
+                bool elimino = await userDatos.EliminarAsync(SoporteDataGridView.CurrentRow.Cells["Codigo"].Value.ToString());
                 if (elimino)
                 {
                     LlenarDataGrid();
@@ -166,5 +162,11 @@ namespace Examen
             DeshabilitarControles();
             LimpiarControles();
         }
+
+        private void SoporteForm_Load(object sender, EventArgs e)
+        {
+            LlenarDataGrid();
+        }
     }
 }
+
